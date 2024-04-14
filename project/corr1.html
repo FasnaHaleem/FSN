@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop Cat-house</title>
+    <!-- Load Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="icon" href="img/round.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/1a52dd44d7.js" crossorigin="anonymous"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+	
+	<style>
+		body{
+			text-transform:uppercase;
+			letter-spacing: 5px;
+			font-family:garamond;
+			font-weight:lighter;
+		}
+	</style>
+</head>
+<header style="background-color:#ffdab9;">
+    <nav class="navBar">
+        <div class="logo">
+            <a href="home.html">fara</a>
+        </div>
+        <div class="nav__menu" id="menu__button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!-- <span class="nav__menu">&#9776</span> -->
+        <ul class="navItem">
+            <li class="navLink">
+                <a class="nava" href="#">Special Offers</a>
+            </li>
+            <li class="navLink">
+                <a class="nava" href="#">Best Sellers</a>
+            </li>
+            <li class="navLink1">
+                <a class="nava1" href="#">All Products</a>
+                <ul class="nav-sublist">
+                    <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Upper Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Lower Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navIcon">
+            <div class="car">
+                <a href="index7.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+            </div>
+            <div class="member">
+                <a class="memberLink" href="index3.html"><i class="fa-solid fa-circle-user fa-lg"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav_page">
+        <!-- Overlay -->
+        <div class="navham menu-click overlay" id="toright">
+            <!-- <a href="javascript:void(0)" id="closelay">&times;</a> -->
+            <ul class="navHamItem">
+                <li class="navLink">
+                    <a class="nava" href="#">Special Offers</a>
+                </li>
+                <li class="navLink">
+                    <a class="nava" href="#">Best Sellers</a>
+                </li>
+                <li class="navLink1">
+                    <a class="nava1" href="#">All Products</a>
+                    <ul class="nav-sublist">
+                        <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Upper Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Lower Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="first">
+        <div class="picture">
+            <img src="img/image1.png" class="clothes" id="clothes">
+            <img src="img/image1_blue.png" class="clothes" id="clothesBlue">
+            <img src="img/image1_cream.png" class="clothes" id="clothesCream">
+        </div>
+        <div class="intro">
+            <div class="innerbox">
+                <p class="title">Running Buddies Tank Top</p>
+                <p class="price">LKR1500/=</p>
+                <ul class="promotion">
+                    <li class="act">・10% off for 1, 15% off for 2, 30% off for 3</li>
+                    <li class="act">・Free Shipping for orders over LKR 5000/=</li>
+                    <li class="act">・Share and get LKR 50/= off</li>
+                </ul>
+                <div class="famount">
+                    <button id="size" class="famountButton famountp">F</button>
+                    <div class="quantity">
+                        <button class="quantityButton quantity_minus"><i
+                                class="fa-sharp fa-solid fa-minus "></i></button>
+                        <input class="quantity_number" type="text" value="1">
+                        <button class="quantityButton quantity_plus"><i class="fa-sharp fa-solid fa-plus "></i></button>
+                    </div>
+                </div>
+                <div class="colorChoose">
+                    <button class="colorButton" id="colorButton1" value="Blue">
+                        <div class="color1"></div>
+                    </button>
+                    <button class="colorButton" id="colorButton2" value="Cream">
+                        <div class="color2"></div>
+                    </button>
+                    <button class="colorButton" id="colorButton3" value="Light Gray">
+                        <div class="color3"></div>
+                    </button>
+                </div>
+                <button class="addcar">Add to Cart</button></a>
+                <div class="box">
+                    <p class="boxp">Product Description</p>
+                    <button class="boxButton" id="productMore">+</button>
+                </div>
+                <hr>
+                <div class="box">
+                    <p class="boxp">Size Chart</p>
+                    <

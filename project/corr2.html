@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logi-clothing store</title>
+    <link rel="stylesheet" href="css/style3.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/1a52dd44d7.js" crossorigin="anonymous"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+	
+	<style>
+		body{
+			text-transform:uppercase;
+			letter-spacing: 5px;
+			font-family:garamond;
+			font-weight:lighter;
+		}
+	</style>
+</head>
+<header>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="home.html" >fara</a>
+        </div>
+        <div class="nav__menu" id="menu__button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <ul class="navItem">
+            <li class="navLink">
+                <a class="nava" href="#">Special Offers</a>
+            </li>
+            <li class="navLink">
+                <a class="nava" href="#">Best Sellers</a>
+            </li>
+            <li class="navLink1">
+                <a class="nava1" href="#">All Products</a>
+                <ul class="nav-sublist">
+                    <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Top Wear Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Bottom Wear Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navIcon">
+            <div class="car">
+                <a href="index7.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+            </div>
+            <div class="member">
+                <a class="memberLink" href="index3.html"><i class="fa-solid fa-circle-user fa-lg"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="nav_page"><!--Overlay-->
+        <div class="navham menu-click overlay" id="toright">
+            <!-- <a href="javascript:void(0)" id="closelay">&times;</a> -->
+            <ul class="navHamItem">
+                <li class="navLink">
+                    <a class="nava" href="#">Special Offers</a>
+                </li>
+                <li class="navLink">
+                    <a class="nava" href="#">Best Sellers</a>
+                </li>
+                <li class="navLink1">
+                    <a class="nava1" href="#">All Products</a>
+                    <ul class="nav-sublist">
+                        <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Top Wear Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Bottom Wear Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="user_page">
+        <div class="card_login">
+            <div class="title">
+                <p class="titlep">Member Login</p>
+            </div>
+            <div class="email">
+                <input type="email" class="emailinput" id="email" placeholder="Email, example@gmail.com">
+            </div>
+            <div class="password">
+                <input type="password" class="passwordinput" id="password" placeholder="Password, at least 6 characters">
+            </div>
+            <div class="submit">
+                <button class="submitButton submitText" id="btnSignIn">Login</button>
+            </div>
+            <div class="additional">
+                <a href="index4.html" class="additionala">Create Account</a>
+                <span class="additional_dot">•</span>
+                <a href="index5.html" class="additionala">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footerText">
+                <ul class="box1">
+                    <li class="footerLink">
+                        <a class=footera href="">Latest News</a>
+                    </li>
+                    <li class="footerLink">
+                        <a class=footera href="">FAQ</a>
+                    </li>
+                    <li class="footerLink">
+                        <a class=footera href="">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="box2">
+                    <p class=footerp>Copyright © Leaf2629 Cat-house</p>
+                </div>
+            </div>
+            <div class="footerIcon">
+                <a class=icona href=""><i class="fa-brands fa-line fa-2x"></i></a>
+                <a class=icona href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="box2xs">
+                <p class=footerp>Copyright © Leaf2629 Cat-house</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+
+    <!--Load jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Load jQuery UI 1.11.4-->
+    <scrip

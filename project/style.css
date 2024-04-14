@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    font-family:garamond ;
+	font-weight:lighter; 
+	text-transform:uppercase;
+	letter-spacing: 6px;
+    margin: 25px;
+    padding: 25px;
+}
+
+/* Home Page Specific Styles */
+
+
+header {
+	background-image:url('header.jpg');
+    background-color: #ffdab9; /* Peachpuff */
+    padding: 60px;
+    text-align: right;
+	background-size:cover;
+	background-position:center;
+	
+}
+
+.header{
+	background-color: white; /* Peachpuff */
+    padding: 60px;
+    text-align: center;
+	background-size:cover;
+	background-position:center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* OrangeRed */
+}
+
+main {
+    padding: 20px;
+	text-align:center;
+}
+
+footer {
+    background-color: #ffdab9; /* Peachpuff */
+    padding: 20px;
+    text-align: center;
+}
+
+.absolute{
+	position:absolute;
+	width:100%;
+	height: 30px;
+	background-color:#ffe5cc;
+	text-align:center;
+	font-family:Montserrat;
+	text-transform:uppercase;
+	display: flex;
+    justify-content: center; 
+    align-items: center;
+	font-size: 12px;
+}
+h1{
+	font-family:garamond;
+	font-weight:lighter; 
+	text-transform:uppercase;
+	letter-spacing: 6px;
+	line-height: 1.5;
+	font-size: 40px; 
+}
+p{
+	font-family:garamond;
+	font-weight:lighter; 
+	text-transform:uppercase;
+	letter-spacing: 3px;
+	line-height: 1.5;
+	text-align:center;
+}
+
+.summer{
+	background-image:url('summer.jpg');
+    background-color: #ffdab9; /* Peachpuff */
+    padding: 60px;
+    text-align: left;
+	background-size:cover;
+	background-position:center;
+}
+
+button{
+	font-family: Garamond;
+	font-weight: lighter; 
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
+	font-size: 16px; 
+	padding: 10px 20px;
+	background-color: #ffdab9;
+	color: #000; 
+	border: none;
+	cursor: pointer;
+}
+
+.image-container img{
+	
+	margin-right:10px;
+	margin-left:10px;
+}
+.image-container {
+	display:flex;
+}
+
+
+
+.container {
+    display: flex;
+	width:50%;
+   
+}
+
+.image{
+	flex: 0 0 auto; /* Make the image non-flexible */
+    margin-right: 20px;
+	
+	
+}
+
+.text {
+            flex: 1; /* Allow text to take remaining space */
+        }
+		
+ .div1 {
+            flex:1;
+			display:flex;
+			flex-direction:column;
+}
+
+        .div1 img {
+           width:100%;
+		   margin-bottom:10px;
+        }
+
+        .div2 {
+            flex:1;
+			
+        }
+
+        .div2 img {
+            
+            width:100%;
+            
+        }
+		

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf2629 Cat-house</title>
+    <!-- Load Bootstrap -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="icon" href="img/circle.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/1a52dd44d7.js" crossorigin="anonymous"></script>
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+</head>
+<header>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" class="leafLogo"></a>
+        </div>
+        <div class="nav__menu" id="menu__button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!-- <span class="nav__menu">&#9776</span> -->
+        <ul class="navItem">
+            <li class="navLink">
+                <a class="nava" href="#">Special Offers</a>
+            </li>
+            <li class="navLink">
+                <a class="nava" href="#">Best Sellers</a>
+            </li>
+            <li class="navLink1">
+                <a class="nava1" href="#">All Products</a>
+                <ul class="nav-sublist">
+                    <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Upper Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Lower Collection</a></li>
+                    <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="navIcon">
+            <div class="car">
+                <a href="index7.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+            </div>
+            <div class="member">
+                <a class="memberLink" href="index3.html"><i class="fa-solid fa-circle-user fa-lg"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav_page">
+        <!-- Overlay -->
+        <div class="navham menu-click overlay" id="toright">
+            <!-- <a href="javascript:void(0)" id="closelay">&times;</a> -->
+            <ul class="navHamItem">
+                <li class="navLink">
+                    <a class="nava" href="#">Special Offers</a>
+                </li>
+                <li class="navLink">
+                    <a class="nava" href="#">Best Sellers</a>
+                </li>
+                <li class="navLink1">
+                    <a class="nava1" href="#">All Products</a>
+                    <ul class="nav-sublist">
+                        <li class="navLinkblank"><a href="#" class="nava" id="nav-sublista"></a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Upper Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Lower Collection</a></li>
+                        <li class="navLink2"><a href="#" class="nava" id="nav-sublista">Accessories</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="first">
+        <div class="picture">
+            <img src="img/image1.png" class="clothes" id="clothes">
+            <img src="img/image1blue.png" class="clothes" id="clothesBlue">
+            <img src="img/image1cream.png" class="clothes" id="clothesCream">
+        </div>
+        <div class="intro">
+            <div class="innerbox">
+                <p class="title">Running Buddy Tank Top</p>
+                <p class="price">$790</p>
+                <ul class="promotion">
+                    <li class="act">・10% off for single purchase / 15% off for two items / 30% off for three items</li>
+                    <li class="act">・Free shipping for orders over $1500</li>
+                    <li class="act">・Share and get $50 off</li>
+                </ul>
+                <div class="famount">
+                    <button id="size" class="famountButton famountp">F</button>
+                    <div class="quantity">
+                        <button class="quantityButton quantity_minus"><i
+                                class="fa-sharp fa-solid fa-minus "></i></button>
+                        <input class="quantity_number" type="text" value="1">
+                        <button class="quantityButton quantity_plus"><i class="fa-sharp fa-solid fa-plus "></i></button>
+                    </div>
+                </div>
+                <div class="colorChoose">
+                    <button class="colorButton" id="colorButton1" value="Sky Blue">
+                        <div class="color1"></div>
+                    </button>
+                    <button class="colorButton" id="colorButton2" value="Cream White">
+                        <div class="color2"></div>
+                    </button>
+                    <button class="colorButton" id="colorButton3" value="Light Gray">
+                        <div class="color3"></div>
+                    </button>
+                </div>
+                <button class="addcar">Add to Cart</button></a>
+                <div class="box">
+                    <p class="boxp">Product Description</p>
+                    <button class="boxButton" id="productMore">+</button>
+                </div>
+                <hr>
+                <div class="box">
+                    <p class="boxp">Size
+					                </p>
+                    <button class="boxButton" id="sizeMore">+</button>
+                </div>
+                <hr>
+                <div class="box">
+                    <p class="boxp">Size Chart</p>
+                    <button class="boxButton" id="sizeguideMore">+</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="card_product_page">
+            <!-- Overlay -->
+            <div class="card_product">
+                <!-- Product Description -->
+                <div class="carTitlebox">
+                    <p class="cardTitle">Product Description</p>
+                    <i class="fa-solid fa-square-xmark productCross"></i>
+                </div>
+                <div class="cardText0">
+                    <div class="material">
+                        <p class="cardTitle0">Material</p>
+                        <hr class="cardhr">
+                        <ul>
+                            <li class="cardli">・Cotton 70%</li>
+                            <li class="cardli">・Linen 30%</li>
+                        </ul>
+                    </div>
+                    <div class="description">
+                        <p class="cardTitle0">Description</p>
+                        <hr class="cardhr">
+                        <ul>
+                            <li class="cardli">・Made In Korea</li>
+                        </ul>
+                        <p class="descriptionp">A tank top for those who are shy to try tank tops! <br>Perfectly paired with nylon pants and a bubbly shirt outside for a casual yet stylish look.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card_size">
+                <!-- Size Chart -->
+                <div class="carTitlebox">
+                    <p class="cardTitle">Size Chart</p>
+                    <i class="fa-solid fa-square-xmark sizeCross"></i>
+                </div>
+                <div class="cardText">
+                    <div class="size">
+                        <hr class="cardhr0">
+                        <table>
+                            <tr>
+                                <td class="sizeTitle">Size</td>
+                                <td class="sizeTitle">Shoulder Width</td>
+                                <td class="sizeTitle">Bust Width</td>
+                                <td class="sizeTitle">Waist Width</td>
+                                <td class="sizeTitle">Full Length</td>
+                            </tr>
+                        </table>
+                        <hr class="sizehr0">
+                        <table>
+                            <tr>
+                                <td class="sizeContent">&nbsp;F&nbsp;</td>
+                                <td class="sizeContent">28cm</td>
+                                <td class="sizeContent">33cm</td>
+                                <td class="sizeContent">30cm</td>
+                                <td class="sizeContent">45cm</td>
+                            </tr>
+                        </table>
+                        <img class="sizepic" src="img/sizechart.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card_sizeguide">
+                <!-- Try-On Guide -->
+                <div class="carTitlebox">
+                    <p class="cardTitle">Try-On Guide</p>
+                    <i class="fa-solid fa-square-xmark sizeguideCross"></i>
+                </div>
+                <div class="cardText">
+                    <div class="sizeguide">
+                        <hr class="cardhr">
+                        <table>
+                            <tr>
+                                <td class="sizeguideTitle">Editor's Info<br>(Female)</td>
+                                <td class="sizeguideTitle">Height</td>
+                                <td class="sizeguideTitle">Weight</td>
+                                <td class="sizeguideTitle">Shoulder Width</td>
+                                <td class="sizeguideTitle">Bust Circumference</td>
+                                <td class="sizeguideTitle">Body Type</td>
+                                <td class="sizeguideTitle">Size</td>
+                                <td class="sizeguideTitle">Fitting</td>
+                            </tr>
+                        </table>
+                        <hr class="sizeguidehr">
+                        <table>
+                            <tr>
+                                <td class="sizeguideContent">A</td>
+                                <td class="sizeguideContent">156cm</td>
+                                <td class="sizeguideContent">43kg</td>
+                                <td class="sizeguideContent">36cm</td>
+                                <td class="sizeguideContent">79cm</td>
+                                <td class="sizeguideContent">Slight belly</td>
+                                <td class="sizeguideContent">F</td>
+                                <td class="sizeguideContent">Loose</td>
+                            </tr>
+                            <tr>
+                                <td class="sizeguideContent">B</td>
+                                <td class="sizeguideContent">160cm</td>
+                                <td class="sizeguideContent">48kg</td>
+                                <td class="sizeguideContent">38cm</td>
+                                <td class="sizeguideContent">82cm</td>
+                                <td class="sizeguideContent">Broad shoulders</td>
+                                <td class="sizeguideContent">F</td>
+                                <td class="sizeguideContent">Comfortable</td>
+                            </tr>
+                            <tr>
+                                <td class="sizeguideContent">C</td>
+                                <td class="sizeguideContent">165cm</td>
+                                <td class="sizeguideContent">52kg</td>
+                                <td class="sizeguideContent">38cm</td>
+                                <td class="sizeguideContent">87cm</td>
+                                <td class="sizeguideContent">Slim</td>
+                                <td class="sizeguideContent">F</td>
+                                <td class="sizeguideContent">Comfortable</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footerText">
+                <ul class="box1">
+                    <li class="footerLink">
+                        <a class=footera href="">Latest News</a>
+                    </li>
+                    <li class="footerLink">
+                        <a class=footera href="">FAQs</a>
+                    </li>
+                    <li class="footerLink">
+                        <a class=footera href="">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="box2">
+                    <p class=footerp>Copyright © Leaf2629 Cat-house</p>
+                </div>
+            </div>
+            <div class="footerIcon">
+                <a class=icona href=""><i class="fa-brands fa-line fa-2x"></i></a>
+                <a class=icona href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="box2xs">
+                <p>Copyright © Leaf2629 Cat-house</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+
+    <!-- Load jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Load jQuery UI 1.-->
+</html>
